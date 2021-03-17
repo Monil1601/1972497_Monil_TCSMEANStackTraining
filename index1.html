@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Blogging</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
+</head>
+<body class="container" onload="blog()">
+
+    <header>
+        <h1>Simply Blogging</h1>
+    </header>
+
+    <div id="nav">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="" class="nav-link">Add Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Contacts</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="data">
+        <form id="form">
+            <div class="form-group row top">
+                <label class="col-1 col-form-label">Title</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" id="title">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-1 col-form-label">Article</label>
+                <div class="col-10">
+                    <textarea class="form-control" id="article" rows="3" cols="10"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-1 col-form-label">Image</label>
+                <div class="col-5">
+                    <input type="file" class="form-control" id="image">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-10">
+                    <button type="submit" class="btn btn-primary" onclick="append()">Add Blog</button>
+                </div>
+            </div>
+        </form>
+        <div id="allBlogs"></div>
+    </div>
+    <script src="simply.js"></script>
+</body>
+</html>
