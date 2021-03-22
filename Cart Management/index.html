@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Management</title>
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+    <link rel="stylesheet" href="master.css">
+
+</head>
+
+
+<body class="container" onload="Cartupdate()">
+    
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand mb-1 h1" href="#">Appify</a>
+    <div class="navbar" id="navText">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a href="final.html" class="nav-link">Buy Now</a>
+        </li>
+    </ul>
+</div>
+</nav>  
+
+<div id="size">Cart: 0</div>
+
+
+<div class="card-deck">
+    <div class="row">  
+<div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://www.thesun.co.uk/wp-content/uploads/2020/11/IMG_0577-2.jpg?strip=all&w=960" alt="Macbook-pro-m1">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">Macbook Pro M1</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$1299</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+</div>
+    
+    <div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-silver-202003?wid=470&hei=556&fmt=png-alpha&.v=1583550102533" alt="ipad pro 11 inch">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">iPad Pro 11 inch 128Gb</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$799</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://sc04.alicdn.com/kf/Hed06eba658364556978136d720f6d13fE.jpg" alt="Apple Watch Series 6">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">Apple Watch Series 6</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$399</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="row">
+    <div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=470&amp;hei=556&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1604021663000" alt="iPhone 12 Pro">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">iPhone 12 Pro</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$999</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+    </div>
+
+    <div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://i.pcmag.com/imagery/reviews/048uqcL60FK6NeedR23Bfvo-2.1605563567.fit_scale.size_1028x578.jpg" alt="Mac Mini">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">Mac Mini</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$699</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+</div>
+
+    <div class="col-4">
+    <div class="card">
+        <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-215-config-hero-201706?wid=627&hei=522&fmt=jpeg&qlt=95&.v=1603396633000" alt="Mac Mini">
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+            <h4 class="card-title">iMac</h4>
+            <div class="card-text">Cost:</div>
+            <div class="card-text cost">$1099</div>
+            <div class="form-group">
+                <label for="qty">Quantity</label>
+                <select class="form-control col-11 qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+            <input type="button" class="btn btn-primary add" onclick="addToCart()" value="Add to Cart">
+            <input type="button" class="btn btn-primary remove" onclick="remove()" value="Delete">
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+</div>
+
+<script src="apple.js"></script>
+</body>
+
+</html>
