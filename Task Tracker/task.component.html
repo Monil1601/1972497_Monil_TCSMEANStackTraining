@@ -1,0 +1,34 @@
+<div>
+    
+        <h2>To-do-tasks</h2>
+        <form #taskRef="ngForm"(ngSubmit)="addData(taskRef.value)">
+            <mat-form-field appearance="fill">
+                <mat-label>Id</mat-label>
+                <input matInput type ="text" name="id" ngModel/>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput type ="text" name="name" ngModel/>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Task</mat-label>
+                <input matInput type ="text" name="task" ngModel/>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Deadline</mat-label>
+                <input matInput [matDatepicker]="picker" name="deadline" ngModel>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <button mat-stroked-button color ="primary" style="background-color: burlywood;"type="submit" >Submit</button>
+            <button mat-stroked-button color ="primary" style="background-color: greenyellow;"type="reset" >Reset</button>
+        </form>
+   
+</div>
+
+
+    
