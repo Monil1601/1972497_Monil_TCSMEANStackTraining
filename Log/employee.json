@@ -1,0 +1,36 @@
+[{"fname":"Monil",
+  "lname":"Parekh",
+  "gender":"Male",
+  "email":"monil1601@gmail.com",
+  "date":"4/2/2021, 3:22:53 PM"
+},
+  {"fname":"Amanda",
+   "lname":"Hastings",
+   "gender":"Female",
+   "email":"amandah22@gmail.com",
+   "date":"4/1/2021, 5:02:53 AM"
+},
+   {"fname":"Monil",
+    "lname":"Shah",
+    "gender":"Male","email":"shahmon@gmail.com",
+    "date":"4/2/2021, 6:37:07 PM"
+},
+    {"fname":"krina",
+    "lname":"poladia",
+    "gender":"female",
+    "email":"krinapod@gmail.com",
+    "date":"4/2/2021, 6:37:30 PM"
+},
+    {"fname":"Fiona",
+    "lname":"Lane",
+    "gender":"Female",
+    "email":"flane2348@gmail.com",
+    "date":"4/2/2021, 7:28:36 PM"
+},
+    {"fname":"Malcolm",
+    "lname":"Dias",
+    "gender":"Male",
+    "email":"dias.malc@hotmail.com",
+    "date":"4/2/2021, 7:29:22 PM"
+}
+]
