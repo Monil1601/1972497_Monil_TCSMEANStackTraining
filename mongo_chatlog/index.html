@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Socket using Mongo</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket= io();
+        
+        function onFormSubmit(){
+            var data = formData();
+            socket.emit("chat", data);
+            resetFormData();
+        }
+
+        function formData(){
+            var details = {};
+            details.name = document.getElementById("name").value;
+            details.msg = document.getElementById("msg").value;
+            return details;
+        }
+        function resetFormData(){
+            document.getElementById("name").value="";
+            document.getElementById("msg").value="";
+        }
+
+    </script>
+    <style>
+        #container {
+            width: 750px;
+            margin: 0 auto;
+        }
+        .socket-name{
+            width: 350px;
+            height: 40px;
+            border: solid 1px paleturquoise;
+        }
+        .socket-msg{
+            width: 350px;
+            height: 40px;
+            border: solid 1px paleturquoise;
+        }
+        .socket-submit{
+            width: 60px;
+            height: 35px;
+            border: solid 1px paleturquoise;
+        }
+        .socket-window{
+            height: 10px;
+            width: 400px;
+        }
+        #chatBox{
+            float: left;
+            border: 1px rgb(173, 97, 97) solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="text-align: center; color: rgb(252, 135, 25);"> Socket Using Mongo</h1>
+        <div id=chatBox>
+            <div class="socket-window"></div>
+            <form class="socket-form">
+                <label>Name: </label>
+                <input type="text" class="socket-name" name="name" id="name">
+                <br><br>
+                <label>Message: </label><br><br>
+                <textarea name="msg" id="msg" cols="30" rows="4"></textarea>
+                <br><br>
+                <input type="button" class="socket-submit" value="Send" onclick="onFormSubmit()">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
